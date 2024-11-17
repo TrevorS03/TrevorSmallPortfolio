@@ -1,0 +1,111 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    height: 2000px;
+}
+
+.nav_bar {
+    background-color: rgba(0, 0, 0, .9);
+    width: 100%; /* Make it span the entire width of the page */
+    position: fixed; /* Keep the navbar fixed at the top */
+    top: 0;
+    left: 0;
+    height: 10%; /* Set a fixed height for the navbar */
+    display: flex; /* Use flex for alignment */
+    justify-content: flex-end; /* Align content to the right */
+    align-items: center; /* Center items vertically */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Add a shadow for better visibility */
+    z-index: 1000; /* Ensure the navbar is on top */
+    box-shadow: 0px 1px 2px rgba(0,0,0,0.5), 
+    0px 2px 4px rgba(0,0,0,0.5), 
+    0px 4px 8px rgba(255,255,255,0.5), 
+    0px 8px 16px RGB(255,92,0);
+    transition: box-shadow .5s;
+}
+
+.nav_bar:hover{
+    box-shadow: 0px 1px 2px rgba(255,255,255,0.5), 
+    0px 2px 4px rgba(255,255,255,0.5), 
+    0px 4px 8px rgba(255,255,255,0.5), 
+    0px 8px 20px RGB(255,92,0);
+    transition: box-shadow .5s;
+}
+.nav_bar ul {
+    list-style-type: none; /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 10px; /* Add spacing between buttons */
+}
+
+.nav_bar button {
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 14px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-weight: bolder;
+    margin: 0 10px; /* Adjust margins */
+    padding: 10px 20px; /* Adjust padding for better fit */
+    width: 120px;
+    border: none;
+    transition: background-color 0.25s, box-shadow 0.25s, color 0.25s, font-size .75s;
+}
+
+.nav_bar button:hover {
+    cursor: pointer;
+    background-color: rgb(0, 0, 10);
+    box-shadow: 0px 0px 5px rgba(255, 255,255, 1);
+    font-size: 15px;
+    transition: background-color 0.25s, box-shadow 0.25s, color 0.25s, font-size .75s;
+}
+
+.nav_bar button:active {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 10px white;
+}
+
+.first_content{
+    top: 10%;
+    background-color: black;
+    width: 100%; /* Make it span the entire width of the page */
+    height: 500px;
+    position: absolute; /* Keep the navbar fixed at the top */
+    align-items: center; /* Center items vertically */
+}
+
+.first_content h1{
+    color: RGB(255,92,0);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50pt;
+    text-align: center;
+    justify-content: top;
+    margin-top: 20%;
+    width: auto;
+    animation: 2s ease-out 0s 1 slideInFromLeft;
+    text-shadow: 0px 0px 15px green;
+    -webkit-text-stroke: .5px;
+    -webkit-text-stroke-color:rgba(255, 255,255, .5);
+    transition: color 1s, text-shadow 1s;
+
+}.first_content h1:hover{
+    cursor:context-menu;
+    color: rgb(100, 255, 100);
+    text-shadow: 0px 0px 5px rgb(100, 255, 100);
+    -webkit-text-stroke: .5px;
+    -webkit-text-stroke-color:rgba(100, 255,100, .5);
+
+    transition: color 1s, text-shadow 1s;
+
+}
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateY(-500px);
+        opacity: 0%;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 750%;
+    }
+}
